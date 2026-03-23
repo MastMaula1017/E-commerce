@@ -3,9 +3,11 @@ import {
     createOrderFromCart,
     getMyOrders,
     getOrderById,
+} from "../controllers/orderController.js";
+import {
     getAllOrders,
     updateOrderStatus,
-} from "../controllers/orderController.js";
+} from "../controllers/adminController.js";
 import { authenticate, authorize } from "../middlewares/auth.js";
 
 const router = express.Router();

@@ -1,10 +1,21 @@
 import express from "express";
+import {
+    listUsers,
+    updateUserStatus,
+    getAdminMetrics,
+} from "../controllers/adminController.js";
+import { authenticate, authorize } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-// Placeholder route to confirm admin routes are wired
-router.get("/test", (req, res) => {
-    res.json({ message: "Admin routes working" });
-});
+// All admin routes require admin access
+router.use(authenticate, authorize("admin"));
+
+// Users management
+router.get("/users", listUsers);
+router.patch("/users/:id/status", updateUserStatus);
+
+// Basic metrics for dashboard
+router.get("/metrics", getAdminMetrics);
 
 export default router;

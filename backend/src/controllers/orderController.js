@@ -127,40 +127,5 @@ export const getOrderById = async (req, res) => {
   }
 };
 
-// ADMIN: GET /api/orders/admin/all - list all orders
-export const getAllOrders = async (req, res) => {
-  try {
-    const orders = await Order.find({})
-      .populate("user", "name email")
-      .sort("-createdAt");
-
-    res.status(200).json(orders);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ msg: "Server error" });
-  }
-};
-
-// ADMIN: PATCH /api/orders/:id/status - update status/paymentStatus
-export const updateOrderStatus = async (req, res) => {
-  const { status, paymentStatus } = req.body;
-
-  try {
-    const update = {};
-    if (status) update.status = status;
-    if (paymentStatus) update.paymentStatus = paymentStatus;
-
-    const order = await Order.findByIdAndUpdate(req.params.id, update, {
-      new: true,
-    });
-
-    if (!order) {
-      return res.status(404).json({ msg: "Order not found" });
-    }
-
-    res.status(200).json(order);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ msg: "Server error" });
-  }
-};
+// Admin-specific order endpoints (list all orders, update status) have been
+// moved to adminController to keep admin logic in one place.
