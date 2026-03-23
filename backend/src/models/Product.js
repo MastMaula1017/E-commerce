@@ -56,7 +56,7 @@ const productSchema = new mongoose.Schema(
 );
 
 // Simple helper to generate a slug from name if not provided
-productSchema.pre("validate", function (next) {
+productSchema.pre("validate", function () {
   if (!this.slug && this.name) {
     this.slug = slugify(this.name, {
       lower: true,
@@ -64,7 +64,6 @@ productSchema.pre("validate", function (next) {
       trim: true,
     });
   }
-  next();
 });
 
 const Product = mongoose.model("Product", productSchema);

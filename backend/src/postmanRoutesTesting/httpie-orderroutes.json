@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "orderRoutes",
+    "icon": {
+      "name": "lock",
+      "color": "blue"
+    },
+    "auth": {
+      "type": "none"
+    },
+    "requests": [
+      {
+        "name": "Order(authenticated)must-have-items-inCart",
+        "url": "http://localhost:5000/api/orders",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZWIzZWY4YjVjMDFlNTc2Y2FlNyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NDI2MTQyOCwiZXhwIjoxNzc0ODY2MjI4fQ.1-Y2c-c5MwmEOdxxYSQRYGCNhuIVCX4hVpYJFOMMKB0; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 10:23:48 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"shippingAddress\": {\n    \"fullName\": \"vansh\",\n    \"addressLine1\": \"123 Main St\",\n    \"addressLine2\": \"Apt 4B\",\n    \"city\": \"New delhi\",\n    \"postalCode\": \"10001\",\n    \"country\": \"INDIA\",\n    \"phone\": \"+91 23123221\"\n  }\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "viewAllOrders(authenticated)",
+        "url": "http://localhost:5000/api/orders",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZWIzZWY4YjVjMDFlNTc2Y2FlNyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NDI2MTQyOCwiZXhwIjoxNzc0ODY2MjI4fQ.1-Y2c-c5MwmEOdxxYSQRYGCNhuIVCX4hVpYJFOMMKB0; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 10:23:48 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"shippingAddress\": {\n    \"fullName\": \"vansh\",\n    \"addressLine1\": \"123 Main St\",\n    \"addressLine2\": \"Apt 4B\",\n    \"city\": \"New delhi\",\n    \"postalCode\": \"10001\",\n    \"country\": \"INDIA\",\n    \"phone\": \"+91 23123221\"\n  }\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "viewOrder-one(authenticated)",
+        "url": "http://localhost:5000/api/orders/69c119dd791b05696a2cf40e",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZWIzZWY4YjVjMDFlNTc2Y2FlNyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NDI2MTQyOCwiZXhwIjoxNzc0ODY2MjI4fQ.1-Y2c-c5MwmEOdxxYSQRYGCNhuIVCX4hVpYJFOMMKB0; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 10:23:48 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"shippingAddress\": {\n    \"fullName\": \"vansh\",\n    \"addressLine1\": \"123 Main St\",\n    \"addressLine2\": \"Apt 4B\",\n    \"city\": \"New delhi\",\n    \"postalCode\": \"10001\",\n    \"country\": \"INDIA\",\n    \"phone\": \"+91 23123221\"\n  }\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "viewAllOrder-queryParams(admin)",
+        "url": "http://localhost:5000/api/orders/admin/all?page=1&limit=1",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZjFkZWY4YjVjMDFlNTc2Y2FlYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDI1OTkyMCwiZXhwIjoxNzc0ODY0NzIwfQ.ClRRYelKauLdeCanwBAr-evK4kYQDeS-QV76JSkKaCs; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 09:58:40 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "updateOrder-Status(admin)",
+        "url": "http://localhost:5000/api/orders/69c119dd791b05696a2cf40e/status",
+        "method": "PATCH",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZjFkZWY4YjVjMDFlNTc2Y2FlYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDI1OTkyMCwiZXhwIjoxNzc0ODY0NzIwfQ.ClRRYelKauLdeCanwBAr-evK4kYQDeS-QV76JSkKaCs; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 09:58:40 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{ \"status\": \"shipped\",\n  \"paymentStatus\": \"paid\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}

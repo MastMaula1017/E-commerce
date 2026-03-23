@@ -66,6 +66,10 @@ export const login = async (req, res) => {
       return res.status(400).json({ msg: "Invalid credentials" });
     }
 
+    if (!user.isActive) {
+      return res.status(403).json({ msg: "Account is deactivated. Please contact support." });
+    }
+
     const isMatch = await bcrypt.compare(password, user.passwordHash);
     if (!isMatch) {
       return res.status(400).json({ msg: "Invalid credentials" });

@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "productRoutes",
+    "icon": {
+      "name": "circle",
+      "color": "pink"
+    },
+    "auth": {
+      "type": "none"
+    },
+    "requests": [
+      {
+        "name": "createProduct(admin)",
+        "url": "http://localhost:5000/api/products",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZjFkZWY4YjVjMDFlNTc2Y2FlYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDI1OTkyMCwiZXhwIjoxNzc0ODY0NzIwfQ.ClRRYelKauLdeCanwBAr-evK4kYQDeS-QV76JSkKaCs; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 09:58:40 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"name\": \"Black T-Shirt\",\n  \"description\": \"100% cotton\",\n  \"price\": 2000,\n  \"images\": [\"https://example.com/blue-shirt.jpg\"],\n  \"category\": \"clothing\",\n  \"brand\": \"MyBrand\",\n  \"stock\": 50\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "updateProductDetails(admin)",
+        "url": "http://localhost:5000/api/products/69c110dc791b05696a2cf3cd",
+        "method": "PUT",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZjFkZWY4YjVjMDFlNTc2Y2FlYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDI1OTkyMCwiZXhwIjoxNzc0ODY0NzIwfQ.ClRRYelKauLdeCanwBAr-evK4kYQDeS-QV76JSkKaCs; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 09:58:40 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"price\":\"500\",\n  \"stock\":\"40\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "deleteProduct(admin)",
+        "url": "http://localhost:5000/api/products/69c110dc791b05696a2cf3cd",
+        "method": "DELETE",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZjFkZWY4YjVjMDFlNTc2Y2FlYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDI1OTkyMCwiZXhwIjoxNzc0ODY0NzIwfQ.ClRRYelKauLdeCanwBAr-evK4kYQDeS-QV76JSkKaCs; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 09:58:40 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"price\":\"500\",\n  \"stock\":\"40\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "queryParams(public)",
+        "url": "http://localhost:5000/api/products/?minPrice=1000&maxPrice=5500",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "getAllProducts(public)",
+        "url": "http://localhost:5000/api/products/",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "getAllProductWith-Id(public)",
+        "url": "http://localhost:5000/api/products/69c11138791b05696a2cf3cf",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}

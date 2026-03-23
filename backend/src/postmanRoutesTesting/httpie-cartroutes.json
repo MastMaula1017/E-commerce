@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "cartRoutes",
+    "icon": {
+      "name": "paperPencil",
+      "color": "green"
+    },
+    "auth": {
+      "type": "none"
+    },
+    "requests": [
+      {
+        "name": "viewCart(authenticated)",
+        "url": "http://localhost:5000/api/cart",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZWIzZWY4YjVjMDFlNTc2Y2FlNyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NDI2MTQyOCwiZXhwIjoxNzc0ODY2MjI4fQ.1-Y2c-c5MwmEOdxxYSQRYGCNhuIVCX4hVpYJFOMMKB0; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 10:23:48 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "addToCart(authenticated)",
+        "url": "http://localhost:5000/api/cart/items",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZWIzZWY4YjVjMDFlNTc2Y2FlNyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NDI2MTQyOCwiZXhwIjoxNzc0ODY2MjI4fQ.1-Y2c-c5MwmEOdxxYSQRYGCNhuIVCX4hVpYJFOMMKB0; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 10:23:48 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"productId\": \"69c11138791b05696a2cf3cf\",\n  \"quantity\": 5\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "updateQtyCart(authenticated)",
+        "url": "http://localhost:5000/api/cart/items",
+        "method": "PUT",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZWIzZWY4YjVjMDFlNTc2Y2FlNyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NDI2MTQyOCwiZXhwIjoxNzc0ODY2MjI4fQ.1-Y2c-c5MwmEOdxxYSQRYGCNhuIVCX4hVpYJFOMMKB0; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 10:23:48 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"productId\": \"69c11138791b05696a2cf3cf\",\n  \"quantity\": 1\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "deleteCart-Item(authenticated)",
+        "url": "http://localhost:5000/api/cart/items",
+        "method": "DELETE",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZWIzZWY4YjVjMDFlNTc2Y2FlNyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NDI2MTQyOCwiZXhwIjoxNzc0ODY2MjI4fQ.1-Y2c-c5MwmEOdxxYSQRYGCNhuIVCX4hVpYJFOMMKB0; Max-Age=604800; Path=/; Expires=Mon, 30 Mar 2026 10:23:48 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"productId\": \"69c11138791b05696a2cf3cf\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}

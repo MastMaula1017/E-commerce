@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "authRoutes",
+    "icon": {
+      "color": "red",
+      "name": "bulb"
+    },
+    "auth": {
+      "type": "none"
+    },
+    "requests": [
+      {
+        "name": "register",
+        "url": "http://localhost:5000/api/auth/register",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{ \"name\": \"test123\", \n  \"email\": \"test@gmail.com\",\n  \"password\": \"123\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "login(admin)",
+        "url": "http://localhost:5000/api/auth/login",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "apiKey",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": ""
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{ \n  \"email\": \"vansh14raturi@gmail.com\",\n  \"password\": \"123\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "login(user)",
+        "url": "http://localhost:5000/api/auth/login",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "apiKey",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": ""
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{ \n  \"email\": \"example.com\",\n  \"password\": \"123\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "login(test)",
+        "url": "http://localhost:5000/api/auth/login",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{ \n  \"email\": \"test@gmail.com\",\n  \"password\": \"123\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "getme",
+        "url": "http://localhost:5000/api/auth/me",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZjFkZWY4YjVjMDFlNTc2Y2FlYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDIxNDE5OSwiZXhwIjoxNzc0ODE4OTk5fQ.BeC0lb1CwKYEHNj6qQzb_E9VcIx3Vz6kBGie3JN8Hno; Max-Age=604800; Path=/; Expires=Sun, 29 Mar 2026 21:16:39 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": ""
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "logout",
+        "url": "http://localhost:5000/api/auth/logout",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "cookie",
+            "value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzA0ZjFkZWY4YjVjMDFlNTc2Y2FlYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDIxNDE5OSwiZXhwIjoxNzc0ODE4OTk5fQ.BeC0lb1CwKYEHNj6qQzb_E9VcIx3Vz6kBGie3JN8Hno; Max-Age=604800; Path=/; Expires=Sun, 29 Mar 2026 21:16:39 GMT; HttpOnly; SameSite=Lax",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": ""
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}

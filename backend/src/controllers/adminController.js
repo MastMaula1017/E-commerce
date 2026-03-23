@@ -47,7 +47,7 @@ export const updateUserStatus = async (req, res) => {
     const user = await User.findByIdAndUpdate(
       req.params.id,
       { isActive },
-      { new: true, runValidators: true }
+      { returnDocument: "after", runValidators: true }
     ).select("name email role isActive createdAt");
 
     if (!user) {
@@ -151,8 +151,8 @@ export const updateOrderStatus = async (req, res) => {
     if (paymentStatus) update.paymentStatus = paymentStatus;
 
     const order = await Order.findByIdAndUpdate(req.params.id, update, {
-      new: true,
-    });
+    returnDocument: "after",
+  });
 
     if (!order) {
       return res.status(404).json({ msg: "Order not found" });
