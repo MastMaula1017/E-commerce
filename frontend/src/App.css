@@ -1,0 +1,18 @@
+.app-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px 20px 32px;
+  max-width: 1126px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.main-content section {
+  text-align: left;
+}
